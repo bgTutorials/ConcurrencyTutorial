@@ -44,34 +44,41 @@ class ViewController: UIViewController {
     
     @IBAction func didClickOnStart(sender: AnyObject) {
 ////////////***********BEGINNING OF OPerations Queue Tutorial section ************////////////////////////////////////////////////
-  let queue = NSOperationQueue()
+        
+    
+        let queue = NSOperationQueue()
+
+        
+    // First section of Operations queue tutorial
+//        let queue = NSOperationQueue()
+        
         queue.addOperationWithBlock { () -> Void in
-            let img1 = Downloader.downloadImageWithURL(imageURLs[0])
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock({
-                self.imageView1.image = img1
-            })
-        }
-        queue.addOperationWithBlock { () -> Void in
-            let img2 = Downloader.downloadImageWithURL(imageURLs[1])
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock({
-                self.imageView2.image = img2
-            })
-        }
-        queue.addOperationWithBlock { () -> Void in
-            let img3 = Downloader.downloadImageWithURL(imageURLs[2])
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock({
-                self.imageView3.image = img3
-            })
-        }
-        queue.addOperationWithBlock { () -> Void in
-            let img4 = Downloader.downloadImageWithURL(imageURLs[3])
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock({
-                self.imageView4.image = img4
-            })
+                let img1 = Downloader.downloadImageWithURL(imageURLs[0])
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({
+                    self.imageView1.image = img1
+                })
+            }
+            queue.addOperationWithBlock { () -> Void in
+                let img2 = Downloader.downloadImageWithURL(imageURLs[1])
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({
+                    self.imageView2.image = img2
+                })
+            }
+            queue.addOperationWithBlock { () -> Void in
+                let img3 = Downloader.downloadImageWithURL(imageURLs[2])
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({
+                    self.imageView3.image = img3
+                })
+            }
+            queue.addOperationWithBlock { () -> Void in
+                let img4 = Downloader.downloadImageWithURL(imageURLs[3])
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({
+                    self.imageView4.image = img4
+                })
         }
         
         
