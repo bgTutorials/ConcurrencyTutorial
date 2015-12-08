@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sliderValueLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -183,6 +184,13 @@ class ViewController: UIViewController {
         self.sliderValueLabel.text = "\(sender.value * 100.0)"
     }
 
+    @IBAction func didSelectCancel(sender: AnyObject) {
+        
+         self.queue.cancelAllOperations()
+        
+    }
+
+    
 }
 
 

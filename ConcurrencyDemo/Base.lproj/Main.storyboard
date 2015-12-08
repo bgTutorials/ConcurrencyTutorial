@@ -78,6 +78,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="740-DU-CFc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7n4-Q5-Fif">
+                            <connections>
+                                <action selector="didSelectCancel:" destination="BYZ-38-t0r" id="vit-IU-EsY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Start" id="BUt-RJ-v1h">
                             <connections>
                                 <action selector="didClickOnStart:" destination="BYZ-38-t0r" id="dbx-va-pcb"/>
